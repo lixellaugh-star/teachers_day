@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta name="google-site-verification" content="mdIQn9e6KGmtlp_3WiRQ2wNy1nn9p4c8bXhiPsDok5c" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Teacher's Day</title>
+
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            background: #fdf6e3;
+        }
+
+        .button {
+            background-color: rgb(255, 164, 179);
+            color: white;
+            padding: 12px 24px;
+            border: 2px solid black;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+        }
+
+        .card {
+            margin-top: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            max-width: 320px;
+            text-align: center;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="button" onclick="showMessage()">
+        Click Me 🎉
+    </button>
+
+    <div class="card" id="card">
+        <h2>Happy Teacher's Day 🌸</h2>
+        <p>
+            Thank you for being such a wonderful teacher. Your ways of teaching have made a significant impact on our education.<br><br>
+            Your dedication and hard work are truly appreciated.<br><br>
+            I wish you the best for your career and a successful year ahead!
+        </p>
+    </div>
+
+    <!-- Confetti library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script>
+        function showMessage() {
+            // show card
+            document.getElementById("card").style.display = "block";
+
+            // confetti explosion
+            confetti({
+                particleCount: 200,
+                spread: 120,
+                origin: { y: 0.6 }
+            });
+        }
+    </script>
+
+</body>
+
+</html>
